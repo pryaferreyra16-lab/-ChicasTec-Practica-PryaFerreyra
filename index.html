@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fffdd0" />
+    <meta name="description" content="Un mural digital para conocer a Prya Ferreyra, sus intereses y sus pequeños momentos favoritos." />
+    <title>El mural de Prya Ferreyra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="page-shell" id="inicio">
+      <header class="topbar">
+        <a class="wordmark" href="#inicio"><span aria-hidden="true">✿</span> el mural de Prya</a>
+        <nav aria-label="Navegación principal">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#pasiones">Pasiones</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main id="contenido" class="mural-grid">
+        <!-- Perfil: cambia la foto y el texto por los de Prya. -->
+        <section class="profile-card note note-pink" aria-labelledby="profile-title">
+          <span class="tape tape-profile" aria-hidden="true"></span>
+          <div class="profile-copy">
+            <p class="eyebrow">un rinconcito para soñar</p>
+            <h1 id="profile-title">¡Hola, soy<br /><span>Prya Ferreyra!</span></h1>
+            <p class="welcome-line">Bienvenid@ a mi mural creativo <span aria-hidden="true">♡</span></p>
+            <p class="profile-intro">Un espacio para guardar ideas bonitas, compartir lo que me inspira y contar mi historia a mi manera.</p>
+            <a class="paper-link" href="#sobre-mi">Pasa, estás en casa <span aria-hidden="true">↓</span></a>
+          </div>
+          <figure class="avatar-frame">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=85" alt="Retrato de ejemplo; reemplázalo por la foto de Prya" />
+            <figcaption>un poquito de mí</figcaption>
+          </figure>
+          <span class="sparkle sparkle-profile" aria-hidden="true">✦</span>
+          <span class="doodle-heart" aria-hidden="true">♡</span>
+        </section>
+
+        <!-- Nota 1: presentación breve. -->
+        <section class="note note-yellow about-card" id="sobre-mi" aria-labelledby="about-title">
+          <span class="tape tape-yellow" aria-hidden="true"></span>
+          <span class="note-index">NOTA 01</span>
+          <h2 id="about-title">Sobre mí <span aria-hidden="true">✿</span></h2>
+          <p>Soy Prya Ferreyra. Este mural reúne pedacitos de mi mundo: mis ideas, lo que disfruto y las cosas que voy aprendiendo en el camino.</p>
+          <p class="handwritten">Me gusta hacer espacio para la curiosidad, la creatividad y los buenos momentos.</p>
+          <span class="corner-flower" aria-hidden="true">✿</span>
+        </section>
+
+        <!-- Nota 2: intereses editables e interactivos. -->
+        <section class="note note-blue passions-card" id="pasiones" aria-labelledby="passions-title">
+          <span class="tape tape-blue" aria-hidden="true"></span>
+          <span class="note-index">NOTA 02</span>
+          <h2 id="passions-title">Mis pasiones <span aria-hidden="true">♫</span></h2>
+          <p class="card-hint">Elige las que también son parte de ti:</p>
+          <div class="interest-list" aria-label="Intereses de Prya">
+            <button class="interest-tag tag-pink" type="button" aria-pressed="false">✎ ilustración</button>
+            <button class="interest-tag tag-yellow" type="button" aria-pressed="false">♫ música</button>
+            <button class="interest-tag tag-lilac" type="button" aria-pressed="false">♡ lectura</button>
+            <button class="interest-tag tag-white" type="button" aria-pressed="false">✦ diseño</button>
+            <button class="interest-tag tag-green" type="button" aria-pressed="false">☼ paseos</button>
+          </div>
+          <p class="tag-footnote">Intereses de ejemplo: puedes cambiarlos en el HTML.</p>
+          <span class="sparkle sparkle-passions" aria-hidden="true">✧</span>
+        </section>
+
+        <!-- Galería: sustituye cada imagen y pie de foto por recuerdos propios. -->
+        <section class="gallery-section" id="galeria" aria-labelledby="gallery-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">instantáneas de mi mundo</p>
+              <h2 id="gallery-title">Mis cosas favoritas <span aria-hidden="true">♡</span></h2>
+            </div>
+            <span class="handwritten gallery-note">pequeños momentos, grandes recuerdos</span>
+          </div>
+          <div class="gallery-grid">
+            <figure class="polaroid polaroid-rose">
+              <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=85" alt="Materiales y colores de una mesa de arte" loading="lazy" />
+              <figcaption>un día de colores</figcaption>
+            </figure>
+            <figure class="polaroid polaroid-blue">
+              <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=85" alt="Cuaderno abierto en un escritorio luminoso" loading="lazy" />
+              <figcaption>ideas en mi cuaderno</figcaption>
+            </figure>
+            <figure class="polaroid polaroid-lilac">
+              <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=700&q=85" alt="Luz cálida de la mañana entre las nubes" loading="lazy" />
+              <figcaption>una pausa bonita</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Contacto: actualiza los destinos de correo y redes. -->
+        <section class="note note-cream contact-card" id="contacto" aria-labelledby="contact-title">
+          <div class="contact-copy">
+            <p class="eyebrow">mi buzón está abierto</p>
+            <h2 id="contact-title">¿Me dices hola? <span aria-hidden="true">♡</span></h2>
+            <p>Me encantará saber de ti. Nos encontramos por aquí:</p>
+          </div>
+          <div class="contact-links">
+            <a class="contact-button contact-email" href="mailto:prya@example.com"><span aria-hidden="true">✉</span> Escribir un correo <span aria-hidden="true">↗</span></a>
+            <a class="contact-button contact-social" href="https://www.instagram.com/" target="_blank" rel="noreferrer"><span aria-hidden="true">♡</span> Instagram <span aria-hidden="true">↗</span></a>
+            <a class="contact-button contact-social" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span aria-hidden="true">✦</span> LinkedIn <span aria-hidden="true">↗</span></a>
+            <p class="contact-hint">Reemplaza el correo y los enlaces por los de Prya.</p>
+          </div>
+          <span class="contact-sparkle" aria-hidden="true">✧</span>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>hecho con cariño por Prya <span aria-hidden="true">♡</span></span>
+        <a href="#inicio">Volver al inicio ↑</a>
+      </footer>
+    </div>
+  </body>
+</html>
