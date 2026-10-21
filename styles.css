@@ -6,8 +6,8 @@
   --blue: #aec6cf;
   --lilac: #e8e2f3;
   --green: #dcebd5;
-  --ink: #333333;
-  --muted: #70686a;
+  --ink: #241d1f;
+  --muted: #403537;
   --paper-white: #fffdf8;
   --shadow: 0 14px 34px rgba(68, 54, 53, 0.12);
   font-family: "Comfortaa", sans-serif;
@@ -22,9 +22,10 @@ html { scroll-behavior: smooth; }
 body {
   min-width: 320px;
   margin: 0;
-  background-color: var(--cream);
-  background-image: radial-gradient(rgba(75, 66, 59, 0.12) 0.75px, transparent 0.75px);
-  background-size: 19px 19px;
+  background-color: #fffbea;
+  background-image: linear-gradient(rgba(255, 190, 205, .72), rgba(255, 190, 205, .72)), url("assets/fondo-comics.png"), radial-gradient(rgba(75, 66, 59, 0.12) 0.75px, transparent 0.75px);
+  background-size: auto, 236px 354px, 19px 19px;
+  background-repeat: repeat, repeat, repeat;
 }
 button, a { font: inherit; }
 a { color: inherit; }
@@ -46,27 +47,27 @@ a:focus-visible, button:focus-visible { outline: 3px solid #557984; outline-offs
 .wordmark { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font: 22px "Patrick Hand", cursive; }
 .wordmark > span { color: #c36e74; font-size: 24px; }
 .topbar nav { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 27px); }
-.topbar nav a { color: #554f51; text-decoration: none; font-size: 11px; font-weight: 700; transition: color 160ms ease; }
-.topbar nav a:hover { color: #b85f6a; }
+.topbar nav a { color: #383033; text-decoration: none; font-size: 11px; font-weight: 700; transition: color 160ms ease; }
+.topbar nav a:hover { color: #873947; }
 
 .mural-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; gap: 26px 24px; }
 .note { position: relative; border: 1px solid rgba(51, 51, 51, 0.08); border-radius: 22px; box-shadow: var(--shadow); transition: transform 220ms ease, box-shadow 220ms ease; }
 .note:hover { z-index: 2; transform: translateY(-6px) rotate(0); box-shadow: 0 20px 38px rgba(68, 54, 53, 0.16); }
 .profile-card { grid-column: span 7; min-height: 350px; display: grid; grid-template-columns: minmax(0, 1fr) 208px; align-items: center; gap: 20px; overflow: hidden; padding: 42px 35px; transform: rotate(-0.8deg); background: var(--pink); }
 .profile-card::after { position: absolute; z-index: 0; right: -54px; bottom: -98px; width: 250px; height: 250px; border: 1px solid rgba(255, 255, 255, .5); border-radius: 50%; content: ""; }
-.profile-copy { position: relative; z-index: 1; }
-.eyebrow { margin: 0 0 12px; color: #72676a; font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+.profile-copy { position: relative; z-index: 1; color: #211719; }
+.profile-card .eyebrow { color: #302124; }
 .profile-card h1 { margin: 0 0 13px; font: 48px/.96 "Patrick Hand", cursive; }
-.profile-card h1 span { color: #a6495b; }
-.welcome-line { margin: 0 0 13px; font: 21px/1.25 "Patrick Hand", cursive; }
-.welcome-line span { color: #b04f63; }
-.profile-intro { max-width: 370px; margin: 0 0 19px; color: #554e51; font-size: 11px; line-height: 1.8; }
+.profile-card h1 span { color: #5b1427; }
+.welcome-line { margin: 0 0 13px; color: #211719; font: 600 21px/1.25 "Patrick Hand", cursive; }
+.welcome-line span { color: #5b1427; }
+.profile-intro { max-width: 370px; margin: 0 0 19px; color: #211719; font-size: 11px; font-weight: 700; line-height: 1.8; }
 .paper-link { display: inline-flex; align-items: center; gap: 12px; padding: 10px 14px; border: 1px solid rgba(51, 51, 51, .14); border-radius: 10px; background: var(--paper-white); text-decoration: none; font-size: 10px; font-weight: 700; transition: transform 160ms ease; }
 .paper-link:hover { transform: translateY(-2px); }
 .avatar-frame { position: relative; z-index: 1; width: 190px; margin: 0 auto; padding: 8px 8px 13px; transform: rotate(3deg); border: 1px solid rgba(51, 51, 51, .1); border-radius: 18px; background: var(--paper-white); box-shadow: 0 12px 22px rgba(68, 54, 53, .16); }
 .avatar-frame::before { position: absolute; z-index: 2; top: -11px; left: calc(50% - 35px); width: 70px; height: 22px; transform: rotate(-4deg); background: rgba(255, 245, 186, .9); content: ""; }
 .avatar-frame img { display: block; width: 100%; aspect-ratio: 1; border-radius: 50%; object-fit: cover; }
-.avatar-frame figcaption { padding-top: 8px; color: #766b69; font: 16px "Patrick Hand", cursive; text-align: center; }
+.avatar-frame figcaption { padding-top: 8px; color: #403436; font: 16px "Patrick Hand", cursive; text-align: center; }
 .sparkle { position: absolute; color: #9a7c36; }
 .sparkle-profile { top: 25px; right: 28px; font-size: 24px; }
 .doodle-heart { position: absolute; right: 215px; bottom: 24px; color: #ba6b77; font: 34px "Patrick Hand", cursive; transform: rotate(14deg); }
@@ -75,17 +76,15 @@ a:focus-visible, button:focus-visible { outline: 3px solid #557984; outline-offs
 
 .about-card { grid-column: span 5; min-height: 300px; padding: 36px 30px 30px; transform: rotate(1deg); background: var(--yellow); }
 .tape-yellow { top: -8px; left: calc(50% - 38px); transform: rotate(-4deg); background-color: #c7dfd1; }
-.note-index { display: block; margin-bottom: 16px; color: #746c63; font-size: 9px; font-weight: 700; letter-spacing: 1.1px; }
+.note-index { display: block; margin-bottom: 16px; color: #453b35; font-size: 9px; font-weight: 700; letter-spacing: 1.1px; }
 .note h2, .section-heading h2 { margin: 0 0 14px; font: 29px/1.1 "Patrick Hand", cursive; }
 .note h2 > span, .section-heading h2 > span { color: #b86670; }
-.about-card > p { margin: 0 0 14px; color: #514d48; font-size: 11px; line-height: 1.9; }
-.about-card > .handwritten { max-width: 330px; margin-top: 18px; color: #846a67; font: 18px/1.3 "Patrick Hand", cursive; }
-.corner-flower { position: absolute; right: 23px; bottom: 17px; color: #d1847d; font-size: 24px; }
-
+.about-card > p { margin: 0 0 14px; color: #342d27; font-size: 11px; font-weight: 600; line-height: 1.9; }
+.about-card > .handwritten { max-width: 330px; margin-top: 18px; color: #493535; font: 18px/1.3 "Patrick Hand", cursive; }
 .passions-card { grid-column: span 5; min-height: 278px; padding: 34px 30px 26px; transform: rotate(-1deg); background: var(--blue); }
 .tape-blue { top: -8px; right: 48px; transform: rotate(5deg); background-color: #f2b6be; }
 .passions-card h2 { margin-bottom: 6px; }
-.card-hint { margin: 0 0 18px; color: #4e5557; font-size: 10px; }
+.card-hint { margin: 0 0 18px; color: #30393c; font-size: 10px; font-weight: 600; }
 .interest-list { display: flex; flex-wrap: wrap; gap: 10px 8px; }
 .interest-tag { min-height: 36px; padding: 7px 12px; border: 1px solid rgba(51, 51, 51, .16); border-radius: 999px; color: var(--ink); cursor: pointer; font-size: 10px; font-weight: 700; box-shadow: 0 3px 6px rgba(51, 51, 51, .08); transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease; }
 .interest-tag:hover { transform: translateY(-3px) rotate(0); box-shadow: 0 7px 12px rgba(51, 51, 51, .12); }
@@ -95,14 +94,14 @@ a:focus-visible, button:focus-visible { outline: 3px solid #557984; outline-offs
 .tag-white { background: var(--paper-white); transform: rotate(2deg); }
 .tag-green { background: var(--green); transform: rotate(-2deg); }
 .interest-tag[aria-pressed="true"] { border-color: #96505a; background: #a6495b; color: white; transform: translateY(-3px) rotate(0); box-shadow: 0 0 0 3px rgba(166, 73, 91, .16); }
-.tag-footnote { margin: 17px 0 0; color: #4e5557; font: 14px "Patrick Hand", cursive; }
+.tag-footnote { margin: 17px 0 0; color: #30393c; font: 14px "Patrick Hand", cursive; }
 .sparkle-passions { right: 24px; bottom: 18px; font-size: 22px; }
 
 .gallery-section { grid-column: span 7; padding: 2px 4px 0; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 15px; margin: 0 0 18px; }
 .section-heading .eyebrow { margin-bottom: 6px; }
 .section-heading h2 { margin: 0; font-size: 30px; }
-.gallery-note { max-width: 135px; margin-bottom: 4px; color: #7f6b6b; font: 15px/1.15 "Patrick Hand", cursive; text-align: right; transform: rotate(-4deg); }
+.gallery-note { max-width: 135px; margin-bottom: 4px; color: #493739; font: 15px/1.15 "Patrick Hand", cursive; text-align: right; transform: rotate(-4deg); }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
 .polaroid { min-width: 0; margin: 0; padding: 8px 8px 12px; border: 1px solid rgba(51, 51, 51, .1); background: var(--paper-white); box-shadow: 0 8px 18px rgba(68, 54, 53, .13); transition: transform 220ms ease, box-shadow 220ms ease; }
 .polaroid:nth-child(1) { transform: rotate(-2deg); }
@@ -119,16 +118,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid #557984; outline-offs
 .contact-copy, .contact-links { position: relative; z-index: 1; }
 .contact-copy h2 { margin: 0 0 9px; font: 32px/1.1 "Patrick Hand", cursive; }
 .contact-copy h2 span { color: #b86670; }
-.contact-copy > p:last-child { margin: 0; color: #62595a; font-size: 11px; line-height: 1.7; }
+.contact-copy > p:last-child { margin: 0; color: #393032; font-size: 11px; font-weight: 600; line-height: 1.7; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .contact-button { min-height: 39px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid rgba(51, 51, 51, .14); border-radius: 999px; background: white; color: var(--ink); text-decoration: none; font-size: 10px; font-weight: 700; transition: transform 160ms ease, box-shadow 160ms ease; }
 .contact-button:hover { transform: translateY(-3px); box-shadow: 0 7px 12px rgba(51, 51, 51, .12); }
 .contact-email { background: var(--pink); }
 .contact-social:nth-child(2) { background: #e6f0f2; }
 .contact-social:nth-child(3) { background: var(--lilac); }
-.contact-hint { flex-basis: 100%; margin: 2px 0 0; color: #746c63; font-size: 9px; line-height: 1.5; }
+.contact-hint { flex-basis: 100%; margin: 2px 0 0; color: #453b35; font-size: 9px; font-weight: 600; line-height: 1.5; }
 .contact-sparkle { position: absolute; right: 22px; bottom: 7px; color: #c29345; font-size: 30px; }
-.footer { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 12px 4px; color: #756d65; font: 16px "Patrick Hand", cursive; }
+.footer { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 12px 4px; color: #403832; font: 16px "Patrick Hand", cursive; }
 .footer a { text-decoration: none; }
 .footer > span > span { color: #bd6b75; }
 
